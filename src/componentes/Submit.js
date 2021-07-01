@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import logoML from '../assets/images/Logo_ML.png'
 import search from '../assets/images/ic_Search.png'
-import {withRouter} from "react-router-dom";
 
 
-const Submit = ({setProduct, match, location, history}) => {
+
+const Submit = ({setProduct}) => {
 
     const [inputText, setInputText] = useState('')
 
@@ -18,17 +18,10 @@ const Submit = ({setProduct, match, location, history}) => {
         
         if (inputText.trim().length > 3) {
             setProduct(inputText)
-
-   
-
         }
-
-
     }
 
-
     return (
-
 
         <div className="search-container">
             <div className="search-content">
@@ -50,4 +43,4 @@ const Submit = ({setProduct, match, location, history}) => {
 }
 
 
-export default withRouter(Submit)
+export default Submit
